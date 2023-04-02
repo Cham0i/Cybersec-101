@@ -82,7 +82,7 @@ Why does this fake website have a real Microsoft certificate? Because their webs
  
  We all know what passwords are, but few know how to be responsible with our passwords. There are two concepts you should follow. 
  
-### Don't make your password predicable
+### 1 - Don't make your password predicable
  
  Password is a terrible password. So is Password1234. To keep hackers from bruteforcing their way into a login, avoid using dictionary words. Opt to use slang, made up words, or leet speak. (Th1s is 133t sp3ak, c00l r1ght?). Use number and symbols when possible 
  
@@ -94,21 +94,19 @@ Let's use my email for example
 
 I was a dumb middleschooler when I signed up for these websites. So had a hacker used my email address and password from theses breaches to log in to my google account they probably would have succeeded. This is why you don't use the same passwords twice, and why you should change your passwords every year. 
 
-(Fortunately D20 only compromised my password hash, meaning my password in its encrypted form. Had they stored my password naked I would be in very big trouble. And we are not gonna talk about why I had a wattpad account in middleschool.)
+(Fortunately D20 only compromised my password hash, meaning my password in its encrypted form. Had they stored my password naked I would be in very big trouble. Also we are not gonna talk about why I had a wattpad account in middleschool.)
 
- 
-### Don't keep your password naked
- Don't have your passowrds in a stickynote on ur monitor, nor written in a text file on ur computer. 
- 
- Use a trusted password manager (ahem not LASTPASS) to keep things simple.
+### 2 - Don't keep your passwords naked and afraid
 
-While it can be a little tedious, it greatly enhances personal security. Use your phone (SMS, email, or device [google]). Consider using U2F key or QR
+If you have your passowrds in a stickynote on your monitor or written in a text file on ur computer, stop it. If you are going to store your passwords naked, at the very least store them somewhere private. Writting your passwords down in your diary or on a external flashdrive are better than storing them out in the open. Yet, storing your passwords as a hash, like how most websites do, is a far better alternative than storing them naked. 
 
-Indeed, the court said that all biometrics are the same as fingerprints, which, according to Bloomberg Law, can be recorded as part of a legal search. Legal searches require reasonable suspicion that someone has committed a crime described in a warrant.
+When you are walking down a sketchy alleyway its best to walk with someone else so that both of you may protect each other in case of an attack. 2 Factor authentication essentially is that second password. 2-factor authentication is usually required when there is a log in from an unknown device. althought some applications have the option to require 2 factor authentication for transactions, sessions, account changes, etc. If you ever been sent and email or SMS with a code to log in, congratulations, you already have 2 factor authentication for that service. That's really all you need, but if you want to be hardcore with your security you can use QR authentication or a U2F key to greatly reduce your chances of getting laid.
 
-Suspects cannot be made to give law enforcement officials a passcode. Forcing someone to utter a code would be self-incriminating testimony, but biometrics, according to this ruling, are evidence that can be gathered.
+I know this is extremely tedious and I don't expect the common man to single handedly encrypt all of their passwords. This is why I recommend everyone use a password manager. Your ideal password manager should store all of your passwords as hashes and converts them back to its naked form so that you can copy and paste them into websites. It should also not be LastPass because they recently got their [data breached](https://blog.lastpass.com/2023/03/security-incident-update-recommended-actions/) (told you these were common).
 
+### Disclaimer on the people using biometric passwords
 
+If you use your fingerprints or face to unlock your phone, you should consider switching back to a pattern or pin password. Police officers and jelous partners can easily unlock your phone without your permission. As a person who is wanted by the state of Oklahoma and who is currently cheating on his girlfriend of 7 years, I can't tell you how many times having a simple memorized password has saved me from trouble.
 
-
+Speaking more on the legal issue (because im a law nerd too), the 5th ammendment allows us to remain silent in face of police interregation. However courts have already established that forcing defendants to disclose names, home addresses, and even fingerprints are not considered interregation as per the Routine Booking Exception, see United States v. Cruz-Mercedes, 945 F.3d 569 (1st Cir. 2019). Thus a police officer is legally allowed to use a defendant's fingerprints to unlock their phone without their concent. In fact this rationale has already been adopted in United States v. Barrera, 415 F. Supp. 3d 832 (N.D. Ill. 2019), and will continue to be implemented in other jurisdictions until it inevitably has to be resolved by the SCOTUS. In no case that I am aware of, has a justice ever held that person must be required to disclose their phone's password to the government. To require anyone to say anything against their will is a clear violation of the 5th ammendment and thus I urge everyone to use memorized passwords instead of biometric passwords to ensure they are protected under the 5th ammendment.
 
