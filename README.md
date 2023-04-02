@@ -11,21 +11,25 @@ A guide on how to safely use computers and the internet for the common man. Each
 
 ## HTML Cookies and Cross-Site Request Forgery (CSRF) Attacks
 
+![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/1.jpg)
+
 An HTML Cookie is a piece of information of locally stored information that allows a website to individually identify your computer from other computers in your network. Without cookies, you would have to log in to every website and rebuild every shopping cart for each browsing session. Life without cookies would be tedious, but arguably safer. If someone stole your laptop and went to Amazon.com, the thief would have access to your Amazon account because the cookies on your computer would have them automatically logged in to your account. To keep yourself safe, only accept cookies on a trusted device, preferably one that can't be easily accessed by an authorized user (phones are easier to steal than desktops). Of course, some websites don't even give you the option to accept or reject cookies. In these circumstances, it's best to use an incognito tab so that the cookies used are destroyed once the incognito tab is closed. 
 
 What if you live in a nice suburban neighborhood with a 0% change of being mugged? Should you still be vigilant about cookies? Absolutely; a hacker could use a Cross-Site Request Forgery (CSRF) attack to access your accounts by using your cookies. Back in yee old days, a hacker could sneak JavaScript code into an email that would run once the victim ran the HTML file (A.K.A viewed the email). Thus that hacker could send a request from your computer to your bank account requesting that it transferred 5K dollars to some offshore bank and the website would comply because the request came from your computer using your cookies. Fortunately, these types of attacks are not as common since most email clients have taken measures to stop JavaScript from sneaking into emails. Additionally many websites with sensitive information (such as banks) don't allow cookies to be stored anyways.
 
+![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/2.jpg)
 
 ## HTTP vs HTTPS
-**See my friend there are two types of websites in this world; those with SSL/TLS encryption and those without, [you dig?](https://youtu.be/l1711jiiRtM)**
 
-Adding an "S" to Hypertext Transfer Protocol (HTTP) gives us HTTPS; the "S" stands for "secured". Packets sent to a website using HTTPS are encrypted using Transport Layer Security (TLS) encryption. 
+See my friend there are two types of websites in this world; those with SSL/TLS encryption and those without
 
-(NERD DETAILS: TLS is sometimes refered to as SSL or SSL/TLS. Secured Socket Layer (SSL) encryption was developed by Netscape back in 1995 and was the predecessor to TLS. After the company withered away, updates to SSL were developed by the Internet Engineering Task Force and the name was changed to TLS to reflect the change in ownership.)
+Adding an "S" to Hypertext Transfer Protocol (HTTP) gives us HTTPS; the "S" stands for "secured". Packets sent to a website using HTTPS are encrypted using Transport Layer Security (TLS) encryption. (NERD DETAILS: TLS is sometimes refered to as SSL or SSL/TLS. Secured Socket Layer (SSL) encryption was developed by Netscape back in 1995 and was the predecessor to TLS. After the company withered away, updates to SSL were developed by the Internet Engineering Task Force and the name was changed to TLS to reflect the change in ownership.)
 
 Encryption is a topic that can be infinitely complex, but the thing you need to know is that HTTP lets other people see the packets being exchanged while HTTPS doesn't. Therefore if you transmitted data through wifi in public, someone with a packet sniffer could see and interpret the data being sent to an HTTP website. That is why [ever since 2019 Google Chrome has flagged all HTTP websites as unsecure](https://security.googleblog.com/2018/02/a-secure-web-is-here-to-stay.html)
 
-![alt text](
+![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/3.png)
+
+![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/5.png)
 
 HTTP is fine if you are simply viewing a website for information. However if you are ever prompted to enter names, addresses, credit card information, email, phone numbers, etc, just know your packets are naked. Only consider entering sensitive information to HTTPS websites, they will put a mantle of encryption to your data.
 
@@ -40,43 +44,45 @@ Merely having HTTPS doesn't mean the website is safe. Even if your connection to
 Every HTTPS website has a SSL certificate (Nerd alert: because the certificate contains the public key for the website that is required for public-private key encrpytion, it is therefore required for HTTPS to be secured). Yet not every certficate should be trusted. Websites can derive their certificates from a certificate authority who ties personal or company information to a domain.
 
 Popular Certificate Authorities include:
-Sectigo
-Comodo
-DigiCert
-Symatic
-Thawte
-GeoTrust
-RapidSSL
-GoDaddy
+- Sectigo
+- Comodo
+- DigiCert
+- Symatic
+- Thawte
+- GeoTrust
+- RapidSSL
+- GoDaddy
 
 These certificate authorities have three different types of certificates
-Domain
 
-At the DV level, the process is fairly short, requiring the buyer to only demonstrate control of the domain or URL. This is done by the CA sending an email to the domain owner (as listed in the WHOIS database). While convenient if you need a certificate right away, this one-check form of validation is the lowest standard on the Internet—and should be trusted accordingly.
+- Domain (DV)
 
-At the DV level, the process is fairly short, requiring the buyer to only demonstrate control of the domain or URL. This is done by the CA sending an email to the domain owner (as listed in the WHOIS database). While convenient if you need a certificate right away, this one-check form of validation is the lowest standard on the Internet—and should be trusted accordingly.
-
-
-Organizational
-
-What distinguishes OV & EV certificates are the extra layers and steps of validation required to obtain them. For both EV & OV certificates CAs must verify the domain owner as well as several details related to the affiliated business including name, type, status, and physical address.
-
-and Extended
+The buyer only needs to demonstrate control of the domain or URL. While convenient, this one-check form of validation is the lowest standard on the Internet—and should be trusted accordingly.
 
 
-With EV, nine additional steps are required including verifying a businesses’ public phone number, length of time in business, registration number and jurisdiction, as well as a domain fraud check, contact blacklist check and a telephone call to authenticate the employment status of the requestor.
+- Organizational (OV)
 
-With EV, nine additional steps are required including verifying a businesses’ public phone number, length of time in business, registration number and jurisdiction, as well as a domain fraud check, contact blacklist check and a telephone call to authenticate the employment status of the requestor.
+OV certificates CAs must verify the domain owner as well as several details related to the affiliated business including name, type, status, and physical address.
 
+- Extended (EV)
 
+With EV, nine additional steps are required including verifying a businesses’ public phone number, length of time in business, registration number and jurisdiction, as well as a domain fraud check, contact blacklist check and a telephone call to authenticate the employment status of the requestor. Below is Apple's SSL certificate. Because this is a EV SSL certificate verified by DigiCert we can be certain that the website we got the certificate from is an authentic Apple website.
 
-WARNING AZURE MAKES SITES APPEAR TO BE FROM MICROSOFT
+![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/6.png)
 
- ## All about passwords
+EVEN with EV certificates take caution of vulnerabiliites. For example the following websites has a valid Microsoft EV SSL certificate despite it being a phishing website (fake website used to fish for credentials).
+
+![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/phishing-site.jpg)
+
+![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/4.jpg)
+
+Why does this fake website have a real Microsoft certificate? Because their website is hosted in Microsoft Azure, and therefore they have a valid Microsoft SSL certificate. The only thing you can do here is be skeptical. If the URL looks funny, such as the ones shown above, consider accessing the website throught a different source (like going to your google account to go to your Google Docs or YouTube account) to double check that the website is legitimate.
+
+## All about passwords
  
  We all know what passwords are, but few know how to be responsible with our passwords. There are two concepts you should follow. 
  
- 1 - Don't make your password predicable
+### Don't make your password predicable
  
  Password is a terrible password. So is Password1234. To keep hackers from bruteforcing their way into a login, avoid using dictionary words. Opt to use slang, made up words, or leet speak. (Th1s is 133t sp3ak, c00l r1ght?). Use number and symbols when possible 
  
@@ -84,12 +90,14 @@ Additionally never use the same password twice or establish a pattern with your 
 
 Let's use my email for example
 
+![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/7.png)
+
 I was a dumb middleschooler when I signed up for these websites. So had a hacker used my email address and password from theses breaches to log in to my google account they probably would have succeeded. This is why you don't use the same passwords twice, and why you should change your passwords every year. 
 
 (Fortunately D20 only compromised my password hash, meaning my password in its encrypted form. Had they stored my password naked I would be in very big trouble. And we are not gonna talk about why I had a wattpad account in middleschool.)
 
  
- 2 - Don't keep your password naked
+### Don't keep your password naked
  Don't have your passowrds in a stickynote on ur monitor, nor written in a text file on ur computer. 
  
  Use a trusted password manager (ahem not LASTPASS) to keep things simple.
