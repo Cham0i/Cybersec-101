@@ -37,9 +37,9 @@ Also this is why you probably don't need a VPN subscription. That "military grad
 
 Merely having HTTPS doesn't mean the website is safe. Even if your connection to a website is encrypted, it could be that the website is a fake and you are actually transmitting data to a scammer/ hacker mascerading as the real website. Fortunately, Certificate Authorities exist to help us verify that the website we are in is the authentic website.
 
-Every HTTPS website has a SSL certificate (Nerd alert: because the certificate contains the public key for the website that is required for public-private key encrpytion, it is therefore required for HTTPS to be secured). Yet not every certficate should be trusted. Websites can derive their certificates from public CA, Private CA or even provide self-signed certificates. 
+Every HTTPS website has a SSL certificate (Nerd alert: because the certificate contains the public key for the website that is required for public-private key encrpytion, it is therefore required for HTTPS to be secured). Yet not every certficate should be trusted. Websites can derive their certificates from a certificate authority who ties personal or company information to a domain.
 
-Popular Public Certificate Authorities include:
+Popular Certificate Authorities include:
 Sectigo
 Comodo
 DigiCert
@@ -49,13 +49,28 @@ GeoTrust
 RapidSSL
 GoDaddy
 
-Popular Private Certificate Authorities:
-Microsoft CA
-Apple CA
-AWS (Amazon) CA
-WARNING AZURE MAKES SITES APPEAR TO BE FROM MICROSOFT
+These certificate authorities have three different types of certificates
+Domain
 
-So what should you look out for? Certificates that are 
+At the DV level, the process is fairly short, requiring the buyer to only demonstrate control of the domain or URL. This is done by the CA sending an email to the domain owner (as listed in the WHOIS database). While convenient if you need a certificate right away, this one-check form of validation is the lowest standard on the Internet—and should be trusted accordingly.
+
+At the DV level, the process is fairly short, requiring the buyer to only demonstrate control of the domain or URL. This is done by the CA sending an email to the domain owner (as listed in the WHOIS database). While convenient if you need a certificate right away, this one-check form of validation is the lowest standard on the Internet—and should be trusted accordingly.
+
+
+Organizational
+
+What distinguishes OV & EV certificates are the extra layers and steps of validation required to obtain them. For both EV & OV certificates CAs must verify the domain owner as well as several details related to the affiliated business including name, type, status, and physical address.
+
+and Extended
+
+
+With EV, nine additional steps are required including verifying a businesses’ public phone number, length of time in business, registration number and jurisdiction, as well as a domain fraud check, contact blacklist check and a telephone call to authenticate the employment status of the requestor.
+
+With EV, nine additional steps are required including verifying a businesses’ public phone number, length of time in business, registration number and jurisdiction, as well as a domain fraud check, contact blacklist check and a telephone call to authenticate the employment status of the requestor.
+
+
+
+WARNING AZURE MAKES SITES APPEAR TO BE FROM MICROSOFT
 
  ## All about passwords
  
@@ -63,16 +78,29 @@ So what should you look out for? Certificates that are
  
  1 - Don't make your password predicable
  
- Password is a terrible password. So is Password1234. To keep hackers from bruteforcing their way into a login, avoid using dictionary words. Opt to use slang, made up words, or leet speak. (Th1s is 133t sp3ak, c00l r1ght?). Additionally never use the same password twice or establish a pattern with your password creation process. Explain data breaches and "hail hitler" ww2 decryption. Obviously use number and symbols when possible
+ Password is a terrible password. So is Password1234. To keep hackers from bruteforcing their way into a login, avoid using dictionary words. Opt to use slang, made up words, or leet speak. (Th1s is 133t sp3ak, c00l r1ght?). Use number and symbols when possible 
+ 
+Additionally never use the same password twice or establish a pattern with your password creation process. This is because websites have their data breached all the time. As a matter of fact there is a whole website dedicated to tracking all theses breaches. https://haveibeenpwned.com/
+
+Let's use my email for example
+
+I was a dumb middleschooler when I signed up for these websites. So had a hacker used my email address and password from theses breaches to log in to my google account they probably would have succeeded. This is why you don't use the same passwords twice, and why you should change your passwords every year. 
+
+(Fortunately D20 only compromised my password hash, meaning my password in its encrypted form. Had they stored my password naked I would be in very big trouble. And we are not gonna talk about why I had a wattpad account in middleschool.)
+
  
  2 - Don't keep your password naked
  Don't have your passowrds in a stickynote on ur monitor, nor written in a text file on ur computer. 
  
- Use a password manager to keep things simple.
+ Use a trusted password manager (ahem not LASTPASS) to keep things simple.
 
 While it can be a little tedious, it greatly enhances personal security. Use your phone (SMS, email, or device [google]). Consider using U2F key or QR
 
-AVOID BIOMETRICS!!!! (Explain legal reasons police can search ur phone using bios)
+Indeed, the court said that all biometrics are the same as fingerprints, which, according to Bloomberg Law, can be recorded as part of a legal search. Legal searches require reasonable suspicion that someone has committed a crime described in a warrant.
+
+Suspects cannot be made to give law enforcement officials a passcode. Forcing someone to utter a code would be self-incriminating testimony, but biometrics, according to this ruling, are evidence that can be gathered.
+
+
 
 
 
