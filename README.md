@@ -87,7 +87,7 @@ So why does this fake website have a real Microsoft certificate? Because their w
  
 ### 1 - Don't make your password predicable
 
-Password is a terrible password; so is Password1234. To keep hackers from brute-forcing their way into a login, avoid using dictionary words, opt to use slang, made-up words, or leet speak (th1s is 133t sp3ak, c00l r1ght), and remember to use numbers and symbols when possible.
+"Password" is a terrible password; so is "Password1234". To keep hackers from brute-forcing their way into a login, avoid using dictionary words, opt to use slang, made-up words, or leet speak (th1s is 133t sp3ak, c00l r1ght), and remember to use numbers and symbols when possible.
 
 Additionally, never use the same password twice or establish a pattern with your password creation process because websites have their data breached all the time. In fact, there is a whole website dedicated to tracking all these breaches. https://haveibeenpwned.com/
 
