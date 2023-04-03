@@ -1,6 +1,6 @@
 
 # Cybersecurity 101 for the commonman (or woman, or child)
-A guide on how to safely use computers and the internet for the average person. Each section aims to explain one aspect of internet technology and how it can be used against you if used recklessly.
+A guide on how to safely use computers and the internet for the average person. Each section aims to explain one aspect of internet technology and how it can be used against you.
 
 **Chapters:**
 - [HTML Cookies and CSRF Attacks](https://github.com/Cham0i/Cybersec-101#html-cookies-and-cross-site-request-forgery-csrf-attacks)
@@ -28,13 +28,13 @@ What if you live in a nice suburban neighborhood with a 0% change of being mugge
 
 Adding an "S" to Hypertext Transfer Protocol (HTTP) gives us HTTPS; the "S" stands for "secured". Packets sent to a website using HTTPS are encrypted using Transport Layer Security (TLS) encryption. (TLS is sometimes refered to as SSL or SSL/TLS. Secured Socket Layer (SSL) encryption was developed by Netscape back in 1995 and was the predecessor to TLS. After the company withered away, updates to SSL were developed by the Internet Engineering Task Force and the name was changed to TLS to reflect the change in ownership.)
 
-Encryption is a topic that can be infinitely complex, but the thing you need to know is that HTTP lets other people see the packets being exchanged while HTTPS doesn't. Therefore if you transmitted data through wifi in public, someone with a packet sniffer could see and interpret the data being sent to an HTTP website. That is why [ever since 2019 Google Chrome has flagged all HTTP websites as unsecure](https://security.googleblog.com/2018/02/a-secure-web-is-here-to-stay.html)
+Encryption is a topic that can be infinitely complex, but the thing you need to know is that HTTP lets other people see the packets being exchanged while HTTPS doesn't. Therefore if you transmitted data through wifi in public, someone with a packet sniffer could see and interpret the data being sent to an HTTP website. That is why ever since [2019 Google Chrome has flagged all HTTP websites as unsecure](https://security.googleblog.com/2018/02/a-secure-web-is-here-to-stay.html)
 
 ![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/3.png)
 
 ![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/5.png)
 
-HTTP is fine if you are simply viewing a website for information. However if you are ever prompted to enter names, addresses, credit card information, email, phone numbers, etc, just know your packets are naked. Only consider entering sensitive information to HTTPS websites, they will put a mantle of encryption to your data.
+HTTP is fine if you are simply viewing a website for information. However if you are ever prompted to enter names, addresses, credit card information, email, phone numbers, etc, just know your data packets are naked. Only consider entering sensitive information to HTTPS websites; they will provide a mantle of encryption to your data.
 
 Also, this is why you probably don't need a VPN subscription. That "military-grade encryption" offered by most VPN services is already provided by all HTTPS websites.
 
