@@ -1,5 +1,5 @@
 
-# Cybersecurity 101 for the commonman (or woman, or child, or kitten)
+# Cybersecurity 101 for the commonman (or woman, or child)
 A guide on how to safely use computers and the internet for the average person. Each section aims to explain one aspect of internet technology and how it can be used against you if used recklessly.
 
 **Chapters:**
