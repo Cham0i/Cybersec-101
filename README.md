@@ -1,13 +1,16 @@
-**[DRAFT]**
 
-# Cybersec-101
-A guide on how to safely use computers and the internet for the common man. Each section aims to explain one aspect of internet technology and how it can be used against you if used recklessly.
+# Cybersecurity 101 for the commonman (or woman, or child, or kitten)
+A guide on how to safely use computers and the internet for the average person. Each section aims to explain one aspect of internet technology and how it can be used against you if used recklessly.
 
 **Chapters:**
-- HTML Cookies and CSRF Attacks
-- HTTP vs HTTPS and Packet Sniffing Attacks
-- SSL Certificates and Phishing Attacks
-- The Password stuff
+- [HTML Cookies and CSRF Attacks](https://github.com/Cham0i/Cybersec-101#html-cookies-and-cross-site-request-forgery-csrf-attacks)
+- [HTTP vs HTTPS and Packet Sniffing Attacks](https://github.com/Cham0i/Cybersec-101#html-cookies-and-cross-site-request-forgery-csrf-attacks)
+- [SSL Certificates and Phishing Attacks](https://github.com/Cham0i/Cybersec-101#ssl-certificates-and-phishing-attacks)
+- [The Password stuff](https://github.com/Cham0i/Cybersec-101#all-about-passwords)
+  - Don't make your password predictable
+  - Don't store your passwords raw
+  - 2-Factor Authentication
+  - Biometric passwords
 
 ## HTML Cookies and Cross-Site Request Forgery (CSRF) Attacks
 
@@ -21,9 +24,9 @@ What if you live in a nice suburban neighborhood with a 0% change of being mugge
 
 ## HTTP vs HTTPS
 
-See my friend there are two types of websites in this world; those with SSL/TLS encryption and those without
+**See my friend there are two types of websites in this world; those with SSL/TLS encryption and those without**
 
-Adding an "S" to Hypertext Transfer Protocol (HTTP) gives us HTTPS; the "S" stands for "secured". Packets sent to a website using HTTPS are encrypted using Transport Layer Security (TLS) encryption. (NERD DETAILS: TLS is sometimes refered to as SSL or SSL/TLS. Secured Socket Layer (SSL) encryption was developed by Netscape back in 1995 and was the predecessor to TLS. After the company withered away, updates to SSL were developed by the Internet Engineering Task Force and the name was changed to TLS to reflect the change in ownership.)
+Adding an "S" to Hypertext Transfer Protocol (HTTP) gives us HTTPS; the "S" stands for "secured". Packets sent to a website using HTTPS are encrypted using Transport Layer Security (TLS) encryption. (TLS is sometimes refered to as SSL or SSL/TLS. Secured Socket Layer (SSL) encryption was developed by Netscape back in 1995 and was the predecessor to TLS. After the company withered away, updates to SSL were developed by the Internet Engineering Task Force and the name was changed to TLS to reflect the change in ownership.)
 
 Encryption is a topic that can be infinitely complex, but the thing you need to know is that HTTP lets other people see the packets being exchanged while HTTPS doesn't. Therefore if you transmitted data through wifi in public, someone with a packet sniffer could see and interpret the data being sent to an HTTP website. That is why [ever since 2019 Google Chrome has flagged all HTTP websites as unsecure](https://security.googleblog.com/2018/02/a-secure-web-is-here-to-stay.html)
 
@@ -108,7 +111,7 @@ I know this is extremely tedious and I don't expect the commonman to single-hand
 
 When you are walking down a sketchy alleyway its best to walk with someone else so that both of you may protect each other in case of an attack. 2 Factor authentication essentially is that second password. 2-factor authentication is usually required when there is a log in from an unknown device. Althought some applications have the option to require 2 factor authentication for transactions, sessions, account changes, etc. If you ever been sent and email or SMS with a code to log in, congratulations, you already have 2 factor authentication for that service; that's really all you need. But if you want to be hardcore with your security you can use QR authentication or a U2F key to greatly reduce your chances of getting laid.
 
-### Disclaimer on the people using biometric passwords
+### A warning to the people using biometric passwords
 
 If you use your fingerprints or face to unlock your phone, you should consider switching back to a pattern or pin password. Police officers and jealous partners can easily unlock your phone without your permission. As a person who is wanted by the state of Oklahoma and who is currently cheating on his girlfriend of 7 years, I can't tell you how many times having a simple memorized password has saved me from trouble.
 
