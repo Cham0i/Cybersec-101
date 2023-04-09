@@ -1,26 +1,45 @@
-
+[VER 2 DRAFT]
 # Cybersecurity 101 for the commonman (or woman, or child)
 A guide on how to safely use computers and the internet for the average person. Each section aims to explain one aspect of internet technology and how it can be used against you.
 
 **Chapters:**
-- [HTML Cookies and CSRF Attacks](https://github.com/Cham0i/Cybersec-101#html-cookies-and-cross-site-request-forgery-csrf-attacks)
-- [HTTP vs HTTPS and Packet Sniffing Attacks](https://github.com/Cham0i/Cybersec-101#html-cookies-and-cross-site-request-forgery-csrf-attacks)
-- [SSL Certificates and Phishing Attacks](https://github.com/Cham0i/Cybersec-101#ssl-certificates-and-phishing-attacks)
+- Anti-Virus
+- Internet Browsing
+  - [HTTP vs HTTPS and Packet Sniffing Attacks](https://github.com/Cham0i/Cybersec-101#html-cookies-and-cross-site-request-forgery-csrf-attacks)
+  - [SSL Certificates and Phishing Attacks](https://github.com/Cham0i/Cybersec-101#ssl-certificates-and-phishing-attacks)
 - [The Password stuff](https://github.com/Cham0i/Cybersec-101#all-about-passwords)
   - Don't make your password predictable
   - Don't store your passwords raw
   - 2-Factor Authentication
   - Biometric passwords
+- Backups
 
-## HTML Cookies and Cross-Site Request Forgery (CSRF) Attacks
+## Anti-Virus
 
-![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/1.jpg)
+Malware can come from anywhere, at any time, in any form. It is impossible for a human to individualy check every file on his or her computer for signs of malware; luckly a program can do this for us. Anti-virus software is not limited to just viruses. Many AV software provide scans for most forms of malware, and other cybersecurity services such as junk file cleaning, wifi scanning, VPN protection, browser protection, etc. 
 
-An HTML Cookie is a piece of information of locally stored information that allows a website to individually identify your computer from other computers in your network. Without cookies, you would have to log in to every website and rebuild every shopping cart for each browsing session. Life without cookies would be tedious, but arguably safer. If someone stole your laptop and went to Amazon.com, the thief would have access to your Amazon account because the cookies on your computer would have them automatically logged in to your account. To keep yourself safe, only accept cookies on a trusted device, preferably one that can't be easily accessed by an authorized user (phones are easier to steal than desktops). Of course, some websites don't even give you the option to accept or reject cookies. In these circumstances, it's best to use an incognito tab so that the cookies used are destroyed once the incognito tab is closed. 
+Although many Anti-virus software are subscription based, most ofer a free version that just offers basic malware detection without all the other fancy cybersecurity features.
 
-What if you live in a nice suburban neighborhood with a 0% change of being mugged? Should you still be vigilant about cookies? Absolutely; a hacker could use a Cross-Site Request Forgery (CSRF) attack to access your accounts by using your cookies. Back in yee old days, a hacker could sneak JavaScript code into an email that would run once the victim ran the HTML file (A.K.A viewed the email). Thus that hacker could send a request from your computer to your bank account requesting that it transferred 5K dollars to some offshore bank and the website would comply because the request came from your computer using your cookies. Fortunately, these types of attacks are not as common since most email clients have taken measures to stop JavaScript from sneaking into emails. Additionally many websites with sensitive information (such as banks) don't allow cookies to be stored anyways.
+Here are some decent ones:
 
-![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/2.jpg)
+[Kaspersky Free](https://usa.kaspersky.com/free-antivirus) (Windows, Android, IOS)
+[Comodo](https://www.comodo.com/home/internet-security/antivirus.php) (Windows)
+[Comodo](https://www.comodo.com/home/internet-security/antivirus-for-linux.php) (Linux)
+[Avira](https://www.avira.com/en/free-antivirus-windows) (Windows)
+[Avira](https://www.comodo.com/home/internet-security/antivirus-for-mac.php) (MacOS)
+
+### The best anti-virus is your brain
+
+While software is a good technical protection against malware, the best protection against malware is reason. Before you click a link or download a file follow commonsense logic.
+
+**Anything that isn't free officially, probably won't be free elsewhere**
+Many people try to avoid paying for software by downloading it from shady websites. This is a terrible idea. Often the popularity and lack of accessibility of an app tempt people to download "free" software that was embeded with malware by hackers. If you need the software, consider finding free alternatives or beg your grandma to buy you a legitimate, secure copy.
+
+**If its too good to be true, it probably is**
+Hopefully you haven't been one of the "lucky few" to be selected for a Facebook giveaway. These giveaways are often ran by hackers to collect sensitive information about you such as your name, address, email, phone number, etc which they will plan to use against you in future hacking campagins (or if you gave them payment information for a FREE giveaway, prepare to have unexpected charges). For example, a couple of ads for a Mr. Beast giveaway have been spreading around youtube; [clicking the link will take you to a scam website.](https://www.wnct.com/on-your-side/consumer-watch/scam-alert-scammer-impersonates-mrbeast-with-fake-10000-giveaway/) While most people don't fall for it, hackers know that the most volnerable groups are children and the elderly; which is why Facebook and Mr. Beast are used as red herrings for these types of scams.
+
+**Neither the government, nor Microsoft/ Apple will contact you via a website**
+Many scary websites and pop-ups display threats of prosecution by the U.S government or warnings of malware infection on your computer. The circumstances relating both of these are ridicioulous and should be considered fakes. If any government agency legitimately wants to prosecute you, you would be in handcuffs by now. Furthermore, a warrant for you arrest needs to display your name and the charges brought against you, both of which are often left vague in these fake government websites. As for malware warnings, you just need to trust me when I say that your browser will not detect malware better than an antivirus (except for online malware file scanners such as [VirusTotal](https://www.virustotal.com/gui/home/upload)). If you want to verify that your machine is free of malware, trust the anti-virus, not a website that has randomly appeared in front of you.
 
 ## HTTP vs HTTPS
 
@@ -118,3 +137,6 @@ If you use your fingerprints or face to unlock your phone, you should consider s
 ![alt text](https://github.com/Cham0i/Cybersec-101/blob/main/Cybersec101/noob.jpg)
 
 Speaking more on the legal issue (because I'm a law nerd too), the 5th Amendment allows us to remain silent in face of police interrogation. However courts have already established that forcing defendants to disclose names, home addresses, and even fingerprints are not considered interrogation as per the Routine Booking Exception, see United States v. Cruz-Mercedes, 945 F.3d 569 (1st Cir. 2019). Thus a police officer is legally allowed to use a defendant's fingerprints to unlock their phone without their consent. In fact, this rationale has already been adopted in United States v. Barrera, 415 F. Supp. 3d 832 (N.D. Ill. 2019), and will continue to be implemented in other jurisdictions until it inevitably has to be resolved by the SCOTUS. In no case that I am aware of, has a justice ever held that person must be required to disclose their phone's password to the government. To require anyone to say anything against their will is a clear violation of the 5th Amendment and thus I urge everyone to use memorized passwords instead of biometric passwords to ensure they are protected under the 5th Amendment.
+
+## Backups
+Okay you screwed up. Despite all of this 
